@@ -6,7 +6,7 @@ require 'warden_skeleton_key/version'
 Gem::Specification.new do |spec|
   spec.name          = "warden_skeleton_key"
   spec.version       = WardenSkeletonKey::VERSION
-  spec.authors       = ["Richard Caverly, Charles Maresh"]
+  spec.authors       = ["Richard Caverly", "Charles Maresh"]
   spec.email         = ["richard.caverly@orm-tech.com", "charles.maresh@orm-tech.com"]
   spec.summary       = %q{Warden Skeleton Key}
   spec.description   = %q{Warden Skeleton Key}
