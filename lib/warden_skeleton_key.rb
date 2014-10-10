@@ -1,4 +1,4 @@
-module WardenSkeletonKey
+class WardenSkeletonKey
   # Middleware to automatically sign in users.
   #
   # NOTE: Only intended to run in test or development environments!
