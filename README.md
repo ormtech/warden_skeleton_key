@@ -1,6 +1,8 @@
 # WardenSkeletonKey
 
-TODO: Write a gem description
+WardenSkeletonKey is a Rack middleware to automatically log you into 
+your development environment. Saving you seconds and from forgetting
+those testing passwords. Was it "test123"?
 
 ## Installation
 
@@ -14,13 +16,29 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Add the middleware to your Rails development environment:
 
-    $ gem install warden_skeleton_key
+```ruby
+# config/environments/development.rb
+
+Application.configure do
+  # ...
+
+  config.middleware.use WardenSkeletonKey do
+    # Return a user object to log in
+    developer_email = `git config user.email`.chomp
+    User.find_by email: [developer_email, 'admin@example.com']
+  end
+end
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+The block provided to WardenSkeletonKey must return a valid user object.
+How that user is located is up to you because every system is different.
+
+Above we're using the current user's git email address and falling 
+back to the default "admin@example.com".
 
 ## Contributing
 
