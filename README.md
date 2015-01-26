@@ -1,5 +1,7 @@
 # WardenSkeletonKey
 
+[![Gem Version](https://badge.fury.io/rb/warden_skeleton_key.svg)](http://badge.fury.io/rb/warden_skeleton_key)
+
 WardenSkeletonKey is a Rack middleware to automatically log you into 
 your development environment. Saving you seconds and from forgetting
 those testing passwords. Was it "test123"?
